@@ -3,14 +3,15 @@
 ## Writing a parameterized class
 
 ```puppet
-class pasture ( #<== /!\ parentheses !"
+class pasture ( #<== /!\ parentheses
 
   $port                = '80', #<== comma
   $default_character   = 'sheep', #<== comma
   $default_message     = '', #<== comma
   $pasture_config_file = '/etc/pasture_config.yaml', #<== comma
-) #<== /!\ parentheses !
-{
+) #<== /!\ parentheses
+
+  {
 
   package {'pasture':
     ensure   => present,
